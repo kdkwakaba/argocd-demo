@@ -1,21 +1,4 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-deployment
-  labels:
-    app: nginx
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:latest
-        ports:
-        - containerPort: 80
+# THIS FILE WAS MOVED FOR KUSTOMIZE
+# primary resource moved to: demo/base/nginx.yaml
+# Use the overlay to build/apply:
+# kustomize build demo/overlays/web | kubectl apply -f -
